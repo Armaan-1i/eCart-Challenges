@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechMart - Inventory Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>TechMart</h1>
+        <p>Inventory Analytics Dashboard</p>
+    </header>
+
+
+    <!-- Search Section -->
+    <section class="search-section">
+
+        <div class="search-content">
+
+            <h2>Inventory Range</h2>
+
+            <p>
+                Find products and calculate inventory value
+                within your selected price range.
+            </p>
+
+            <div class="price-inputs">
+
+                <div class="input-group">
+                    <label for="minPrice">
+                        Minimum Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="minPrice"
+                        placeholder="₹5,000"
+                    >
+                </div>
+
+
+                <div class="input-group">
+                    <label for="maxPrice">
+                        Maximum Price
+                    </label>
+
+                    <input
+                        type="number"
+                        id="maxPrice"
+                        placeholder="₹20,000"
+                    >
+                </div>
+
+
+                <button id="searchBtn">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Dashboard -->
+    <main class="dashboard">
+
+        <h2>Inventory Summary</h2>
+
+
+        <div class="summary-cards">
+
+            <div class="summary-card">
+
+                <span class="card-title">
+                    Products
+                </span>
+
+                <strong id="productCount">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="card-title">
+                    Total Inventory Value
+                </span>
+
+                <strong id="inventoryValue">
+                    ₹0
+                </strong>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <span class="card-title">
+                    Price Range
+                </span>
+
+                <strong id="priceRange">
+                    -
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- Matching Products -->
+
+        <div class="products-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Matching Products</h2>
+
+                    <p>
+                        Products inside your selected price range
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div id="productsContainer">
+
+                <!-- Products will appear here -->
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
